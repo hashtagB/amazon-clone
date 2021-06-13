@@ -5,14 +5,14 @@ import { useStateValue } from "./StateProvider";
 function CheckoutProduct({id, image, title, price, rating}) {
 
     const removeFromBasket = () => {
-        // remove the items from the cart
-        dispatch({
+        
+       dispatch({
             type: 'REMOVE_FROM_BASKET',
             id: id,
         })
 
     }
-    
+
     return (
         <div className='checkoutProduct'>
             <img className='checkoutProduct__image' src={image} />
