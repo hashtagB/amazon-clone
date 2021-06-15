@@ -7,6 +7,8 @@ function Product({id, title, image, price, rating}) {
     const [state, dispatch] = useStateValue();
 
     const addToBasket = () => {
+    //dispatch the item into data layer
+
         dispatch({
             type: 'ADD_TO_BASKET',
             item: {
@@ -18,6 +20,8 @@ function Product({id, title, image, price, rating}) {
             },
         });
     };
+
+    
      
     return (
         <div className="product">
@@ -44,4 +48,4 @@ function Product({id, title, image, price, rating}) {
     )
 }
 
-export default Product
+export default Product;
